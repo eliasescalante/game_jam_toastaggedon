@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgsk8g8dy1gjx"]
+[gd_scene load_steps=4 format=3 uid="uid://dgsk8g8dy1gjx"]
 
 [ext_resource type="PackedScene" uid="uid://ccfcbk0iji4rt" path="res://player/personaje.tscn" id="2_p4v2b"]
 [ext_resource type="PackedScene" uid="uid://gbk21fy5mxm7" path="res://enemy_prueba/enemy1.tscn" id="3_myo1m"]
+[ext_resource type="PackedScene" uid="uid://877rwr1cmga3" path="res://item/cuchillo.tscn" id="3_nlcqn"]
 
 [node name="Level1" type="Node2D"]
 
@@ -34,3 +35,21 @@ position = Vector2(559, 49)
 
 [node name="Personaje" parent="." instance=ExtResource("2_p4v2b")]
 position = Vector2(307, 397)
+
+[node name="cuchillo" parent="." instance=ExtResource("3_nlcqn")]
+position = Vector2(394, 79)
+
+[node name="cuchillo2" parent="." instance=ExtResource("3_nlcqn")]
+position = Vector2(686, 475)
+
+[node name="cuchillo3" parent="." instance=ExtResource("3_nlcqn")]
+position = Vector2(99, 253)
+
+[node name="cuchillo4" parent="." instance=ExtResource("3_nlcqn")]
+position = Vector2(222, 580)
+
+[node name="cuchillo5" parent="." instance=ExtResource("3_nlcqn")]
+position = Vector2(1046, 281)
+
+[node name="cuchillo6" parent="." instance=ExtResource("3_nlcqn")]
+position = Vector2(767, 61)
