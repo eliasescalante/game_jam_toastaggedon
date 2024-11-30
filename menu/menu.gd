@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 
 func _on_start_pressed() -> void:
 	# Cambia a la escena del nivel usando una ruta
-	get_tree().change_scene_to_file("res://scenes/Level1.tscn")
+	get_tree().change_scene_to_file("res://instrucciones/instrucciones.tscn")
 
 func _on_creditos_pressed() -> void:
 	# Cambia a la escena de créditos usando una ruta
