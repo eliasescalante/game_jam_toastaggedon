@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://chxlcbkrj7uir"]
+
+[ext_resource type="Script" path="res://menu/menu.gd" id="1_bq0pm"]
+[ext_resource type="Texture2D" uid="uid://p13w12isp0wk" path="res://assets/images/MENU.png" id="2_myrxn"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_bq0pm")
+
+[node name="ui" type="Node" parent="."]
+
+[node name="start" type="Button" parent="ui"]
+offset_left = 421.0
+offset_top = 209.0
+offset_right = 732.0
+offset_bottom = 290.0
+
+[node name="creditos" type="Button" parent="ui"]
+offset_left = 396.0
+offset_top = 301.0
+offset_right = 749.0
+offset_bottom = 396.0
+
+[node name="salir" type="Button" parent="ui"]
+offset_left = 438.0
+offset_top = 419.0
+offset_right = 734.0
+offset_bottom = 495.0
+
+[node name="fondo" type="Sprite2D" parent="."]
+position = Vector2(579, 320)
+scale = Vector2(0.608333, 0.620833)
+texture = ExtResource("2_myrxn")
+
+[connection signal="pressed" from="ui/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="ui/creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="ui/salir" to="." method="_on_salir_pressed"]
