@@ -4,12 +4,12 @@
 
 ## INTEGRANTES:
 
-- Elias Escalante ( desarrollador)
-- persona 1
-- persona 2
-- persona 3
-- persona 4
-- persona 5
+- ELIAS ESCALANTE ( PROGRAMACION )
+- MARIANO DI ZOCCOLO (QA TESTER)
+- LUCIA RUGGIERI ( ARTE )
+- OMEGA ( ARTE )
+- YSAMAR BALCAZAR ( PROGRAMACION )
+- FERNANDA DI ZOCCOLO ( GAME DESING )
 
   ------
 
@@ -23,3 +23,13 @@ CAPTURAS DEL PROYECTO:
 Perspectiva: top-down
 - Arte: top-down - pixel art - futurista
 - Audio: futurista - frenesí - desesperación - caos
+
+----
+
+![GitHub repo size](https://img.shields.io/github/repo-size/YsaLuna/Chaos-Game-Jam
+)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/YsaLuna/Chaos-Game-Jam
+)
+![GitHub last commit](https://img.shields.io/github/last-commit/YsaLuna/Chaos-Game-Jam
+)
+
