@@ -1,22 +1,22 @@
-# 🌟 **TOASTAGEDDON** 🌟  
+# 🌟 TOASTAGEDDON 🌟  
 Un juego frenético donde controlás una tostada y enfrentás el caos de las tostadoras en un mundo pixel art futurista.
 
 ---
 
-## 🚀 **Índice**  
-1. [Descripción](#📝-descripción)  
-2. [Equipo](#💼-equipo)  
-3. [Capturas del Proyecto](#📸-capturas-del-proyecto)  
-4. [Tecnologías Utilizadas](#⚙️-tecnologías-utilizadas)  
-5. [Badges](#🏆-badges)
+## 🚀 Índice  
+1. [Descripción](#descripción)  
+2. [Equipo](#equipo)  
+3. [Capturas del Proyecto](#capturas-del-proyecto)  
+4. [Tecnologías Utilizadas](#tecnologías-utilizadas)  
+5. [Badges](#badges)
 
 ---
 
-## 📝 **Descripción**  
+## 📝 Descripción  
 
 En **Toastageddon**, tomás el control de una **tostada en el centro de la pantalla** y tu objetivo es sobrevivir a la invasión de tostadoras que llegan desde las cuatro direcciones.  
 
-### 🎮 **Características principales**:  
+### 🎮 Características principales:  
 - **Desafío:** Evitá impactos para no invertir tus controles, lo que añade un nivel de dificultad inesperado.  
 - **Vidas:** Contás con un máximo de **cuatro oportunidades**, pero podés **recuperarlas** recogiendo cuchillos que aparecen aleatoriamente.  
 - **Estilo visual:** Vista **top-down**, con gráficos **pixel art** futuristas.  
@@ -24,7 +24,7 @@ En **Toastageddon**, tomás el control de una **tostada en el centro de la panta
 
 ---
 
-## 💼 **Equipo**  
+## 💼 Equipo  
 
 - **Elías Escalante** - Programación  
 - **Mariano Di Zoccolo** - QA Tester  
@@ -35,13 +35,13 @@ En **Toastageddon**, tomás el control de una **tostada en el centro de la panta
 
 ---
 
-## 📸 **Capturas del Proyecto**  
+## 📸 Capturas del Proyecto  
 
 <img src="https://github.com/YsaLuna/Chaos-Game-Jam/blob/main/assets/images/captura.png" width="600" alt="Captura del Proyecto" />
 
 ---
 
-## ⚙️ **Tecnologías Utilizadas**  
+## ⚙️ Tecnologías Utilizadas  
 
 - **Motor de desarrollo:** Godot Engine  
 - **Lenguaje de programación:** GDScript  
@@ -50,7 +50,7 @@ En **Toastageddon**, tomás el control de una **tostada en el centro de la panta
 
 ---
 
-## 🏆 **Badges**  
+## 🏆 Badges  
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/YsaLuna/Chaos-Game-Jam)  
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/YsaLuna/Chaos-Game-Jam)  
@@ -58,4 +58,5 @@ En **Toastageddon**, tomás el control de una **tostada en el centro de la panta
 
 ---
 
+Con esta versión, los enlaces del índice ahora apuntan correctamente a cada sección. ¡Probalo y decime si necesitás algo más! 😊
 
