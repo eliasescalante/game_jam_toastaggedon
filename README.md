@@ -15,7 +15,7 @@
 
 CAPTURAS DEL PROYECTO:
 
-<img src="" width="600" />
+<img src="https://github.com/YsaLuna/Chaos-Game-Jam/blob/main/assets/images/captura.png" width="600" />
 
 ## DESCRIPCION
 
