@@ -1,40 +1,23 @@
 [gd_scene load_steps=3 format=3 uid="uid://oojq6i5uysam"]
 
 [ext_resource type="Script" path="res://instrucciones/instrucciones.gd" id="1_se4nh"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_h5a3m"]
-outline_size = 2
+[ext_resource type="Texture2D" uid="uid://b3c0yg14g827n" path="res://assets/images/INSTRUCCIONES.png" id="2_2ekd8"]
 
 [node name="Instrucciones" type="Node2D"]
 script = ExtResource("1_se4nh")
 
 [node name="ui" type="Node" parent="."]
 
-[node name="fondo" type="ColorRect" parent="ui"]
-offset_right = 1153.0
-offset_bottom = 642.0
-color = Color(0.874116, 0.543998, 0.968657, 1)
-
-[node name="instrucciones" type="Label" parent="ui"]
-offset_left = 100.0
-offset_top = 91.0
-offset_right = 1025.0
-offset_bottom = 573.0
-text = "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-Nulla volutpat ante ut nulla vestibulum, id aliquet erat tempor. Sed vel eros vehicula, fermentum leo a, hendrerit lectus.
- Aenean vestibulum
- risus sed eros aliquet,
- et suscipit metus eleifend. Ut ac magna et lorem lacinia placerat. Donec suscipit nisi eget ante varius scelerisque. 
-Cras eget venenatis elit. Curabitur accumsan 
-justo vel nulla suscipit, 
-sed fermentum magna tristique.\""
-label_settings = SubResource("LabelSettings_h5a3m")
-
 [node name="siguiente" type="Button" parent="ui"]
-offset_left = 421.0
-offset_top = 545.0
-offset_right = 716.0
-offset_bottom = 621.0
+offset_left = 944.0
+offset_top = 606.0
+offset_right = 1145.0
+offset_bottom = 642.0
 text = "comenzar"
+
+[node name="Instrucciones" type="Sprite2D" parent="."]
+position = Vector2(578, 329)
+scale = Vector2(0.609896, 0.614815)
+texture = ExtResource("2_2ekd8")
 
 [connection signal="pressed" from="ui/siguiente" to="." method="_on_siguiente_pressed"]

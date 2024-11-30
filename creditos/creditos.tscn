@@ -21,4 +21,12 @@ offset_bottom = 636.0
 text = "QUIT
 "
 
+[node name="volver" type="Button" parent="ui"]
+offset_left = 964.0
+offset_top = 483.0
+offset_right = 1131.0
+offset_bottom = 552.0
+text = "ATRAS"
+
 [connection signal="pressed" from="ui/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="ui/volver" to="." method="_on_volver_pressed"]
