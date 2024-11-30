@@ -18,7 +18,8 @@ offset_left = 966.0
 offset_top = 564.0
 offset_right = 1131.0
 offset_bottom = 636.0
-text = "QUIT
+text = "SALIR
+
 "
 
 [node name="volver" type="Button" parent="ui"]

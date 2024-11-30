@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://0jtfldftaj48"]
+
+[ext_resource type="Script" path="res://win-lose/win_lose.gd" id="1_37bvw"]
+[ext_resource type="Texture2D" uid="uid://cmfdgxgqtdc23" path="res://assets/images/WIN LOSE.png" id="2_ygcog"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ab06h"]
+shadow_color = Color(0, 0, 0.054902, 0)
+
+[node name="Win-lose" type="Node2D"]
+script = ExtResource("1_37bvw")
+
+[node name="ui" type="Node" parent="."]
+
+[node name="reintentar" type="Button" parent="ui"]
+offset_left = 368.0
+offset_top = 382.0
+offset_right = 784.0
+offset_bottom = 500.0
+
+[node name="salir" type="Button" parent="ui"]
+offset_left = 436.0
+offset_top = 527.0
+offset_right = 716.0
+offset_bottom = 603.0
+
+[node name="TIEMPO" type="Label" parent="ui"]
+offset_left = 270.0
+offset_top = 232.0
+offset_right = 872.0
+offset_bottom = 321.0
+label_settings = SubResource("LabelSettings_ab06h")
+
+[node name="fondo_label" type="ColorRect" parent="ui"]
+offset_left = 270.0
+offset_top = 234.0
+offset_right = 890.0
+offset_bottom = 320.0
+
+[node name="fondo" type="Sprite2D" parent="."]
+position = Vector2(569, 330)
+scale = Vector2(0.611518, 0.627561)
+texture = ExtResource("2_ygcog")
+
+[connection signal="pressed" from="ui/reintentar" to="." method="_on_reintentar_pressed"]
+[connection signal="pressed" from="ui/salir" to="." method="_on_salir_pressed"]
