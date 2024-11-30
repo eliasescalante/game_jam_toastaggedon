@@ -1,3 +1,24 @@
-[gd_scene format=3 uid="uid://cn5kxy3sg3gol"]
+[gd_scene load_steps=3 format=3 uid="uid://cn5kxy3sg3gol"]
+
+[ext_resource type="Script" path="res://creditos/creditos.gd" id="1_x4hhs"]
+[ext_resource type="Texture2D" uid="uid://clio30vtg3af5" path="res://assets/images/CREDITOS.png" id="2_50ta4"]
 
 [node name="Creditos" type="Node2D"]
+script = ExtResource("1_x4hhs")
+
+[node name="ui" type="Node" parent="."]
+
+[node name="Creditos" type="Sprite2D" parent="ui"]
+position = Vector2(578, 324)
+scale = Vector2(0.601042, 0.601852)
+texture = ExtResource("2_50ta4")
+
+[node name="quit" type="Button" parent="ui"]
+offset_left = 966.0
+offset_top = 564.0
+offset_right = 1131.0
+offset_bottom = 636.0
+text = "QUIT
+"
+
+[connection signal="pressed" from="ui/quit" to="." method="_on_quit_pressed"]
