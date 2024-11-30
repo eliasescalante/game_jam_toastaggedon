@@ -1,9 +1,9 @@
-# TOASTAGEDDON  
+# 🌟 TOASTAGEDDON 🌟  
 Un juego frenético donde controlás una tostada y enfrentás el caos de las tostadoras en un mundo pixel art futurista.
 
 ---
 
-## Índice  
+## 🚀 Índice  
 1. [Descripción](#descripción)  
 2. [Equipo](#equipo)  
 3. [Capturas del Proyecto](#capturas-del-proyecto)  
