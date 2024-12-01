@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://bbjtmvsn8aq2r"]
+[gd_scene load_steps=13 format=3 uid="uid://bbjtmvsn8aq2r"]
 
 [ext_resource type="Script" path="res://enemy/enemy.gd" id="1_emkfy"]
+[ext_resource type="AudioStream" uid="uid://bjagbl8025pd1" path="res://assets/music/SONIDO GOLPE 2.mp3" id="3_1xqiq"]
 [ext_resource type="Texture2D" uid="uid://bigiso327pnxr" path="res://assets/images/tostadora2.png" id="4_2wckx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gmm0v"]
@@ -81,3 +82,7 @@ debug_color = Color(0.665521, 0.347306, 0.941968, 0.42)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-4, -1)
 shape = SubResource("RectangleShape2D_koikl")
+
+[node name="ToasterHitSound" type="AudioStreamPlayer2D" parent="." groups=["enemy"]]
+stream = ExtResource("3_1xqiq")
+volume_db = 24.0

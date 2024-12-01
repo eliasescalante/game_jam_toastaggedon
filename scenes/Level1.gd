@@ -26,6 +26,9 @@ var max_hits: int = 4
 
 var game_is_running: bool = true
 
+# Referencia al nodo de sonido
+@onready var toaster_hit_sound = $ToasterHitSound  # Asegúrate de que el nodo exista
+
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
 	player_area = $Personaje/Area2D
@@ -38,6 +41,12 @@ func _ready() -> void:
 	add_child(spawn_timer)
 	spawn_timer.connect("timeout", Callable(self, "_on_spawn_timer_timeout"))
 	player_area.connect("area_entered", Callable(self, "_on_player_collision"))
+
+func _on_player_collision(area: Area2D) -> void:
+	# Detecta si la tostadora colisiona con la tostada
+	if area.name == "Tostada":  # Cambia "Tostada" por el nombre real de la tostada
+		toaster_hit_sound.play()  # Reproduce el sonido al tocar la tostada
+		print("La tostadora golpeó a la tostada")
 
 func _on_spawn_timer_timeout() -> void:
 	if current_enemies.size() < max_enemy_count and game_is_running:
@@ -101,7 +110,6 @@ func game_over() -> void:
 
 	# Cambiar a la escena "win-lose"
 	get_tree().change_scene_to_file("res://win-lose/win-lose.tscn")
-
 
 func _process(delta: float) -> void:
 	game_time += delta
