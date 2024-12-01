@@ -1,7 +1,7 @@
 extends Node2D
 
 # Número máximo de enemigos en la pantalla
-var max_enemy_count: int = 40
+var max_enemy_count: int = 20  # Aumentar el número máximo de enemigos
 var game_time: float = 0.0
 var player_area: Area2D
 
@@ -26,21 +26,26 @@ var game_is_running: bool = true
 func _ready() -> void:
 	# Obtener el tamaño de la pantalla
 	screen_size = get_viewport_rect().size
-	player_area = $Personaje/Area2D 
+	player_area = $Personaje/Area2D
 	spawn_timer = Timer.new()
-	spawn_timer.wait_time = 0.5
+	
+	# Reducir el tiempo entre la generación de enemigos (más rápido)
+	spawn_timer.wait_time = 0.3  # Reducir el tiempo a 0.3 segundos
 	spawn_timer.autostart = true
 	spawn_timer.one_shot = false
 	
 	add_child(spawn_timer)
-	# Conectar la señal del temporizador para que llame a la función cada vez que se dispara
+	
+	# Conectar la señal del temporizador para que llame a la función cada vez que se dispare
 	spawn_timer.connect("timeout", Callable(self, "_on_spawn_timer_timeout"))
 	player_area.connect("area_entered", Callable(self, "_on_player_collision"))
 
 func _on_spawn_timer_timeout() -> void:
 	# Verificar si el número de enemigos actuales es menor que el máximo permitido
 	if current_enemies.size() < max_enemy_count and game_is_running:
-		spawn_enemy()
+		# Generar múltiples enemigos por ciclo de temporizador
+		for i in range(3):  # Generar 3 enemigos por vez
+			spawn_enemy()
 	else:
 		spawn_timer.stop()
 

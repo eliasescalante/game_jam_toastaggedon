@@ -229,10 +229,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_25tem"]
-size = Vector2(89, 94)
+size = Vector2(76, 80)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_koikl"]
-size = Vector2(85, 92)
+size = Vector2(76, 79)
 
 [node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("1_emkfy")
@@ -244,10 +244,10 @@ animation = &"espadita3"
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(3.5, -4)
+position = Vector2(-3, 3)
 shape = SubResource("RectangleShape2D_25tem")
 debug_color = Color(0.665521, 0.347306, 0.941968, 0.42)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.5, -4)
+position = Vector2(-2, 2.5)
 shape = SubResource("RectangleShape2D_koikl")
