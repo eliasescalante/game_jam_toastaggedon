@@ -1,7 +1,7 @@
 extends Node2D
 
 # Número máximo de enemigos en la pantalla
-var max_enemy_count: int = 10
+var max_enemy_count: int = 40
 var game_time: float = 0.0
 var player_area: Area2D
 

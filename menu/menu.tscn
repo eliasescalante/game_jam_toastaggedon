@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://chxlcbkrj7uir"]
+[gd_scene load_steps=4 format=3 uid="uid://chxlcbkrj7uir"]
 
 [ext_resource type="Script" path="res://menu/menu.gd" id="1_bq0pm"]
 [ext_resource type="Texture2D" uid="uid://p13w12isp0wk" path="res://assets/images/MENU.png" id="2_myrxn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_r3le5"]
+font_size = 55
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_bq0pm")
@@ -25,6 +28,21 @@ offset_left = 438.0
 offset_top = 419.0
 offset_right = 721.0
 offset_bottom = 495.0
+
+[node name="fondo_label" type="ColorRect" parent="ui"]
+offset_left = 307.0
+offset_top = 37.0
+offset_right = 826.0
+offset_bottom = 131.0
+color = Color(0.738749, 0.584816, 0.598543, 1)
+
+[node name="TITULO" type="Label" parent="ui"]
+offset_left = 343.0
+offset_top = 46.0
+offset_right = 804.0
+offset_bottom = 122.0
+text = "TOASTAGEDDON "
+label_settings = SubResource("LabelSettings_r3le5")
 
 [node name="fondo" type="Sprite2D" parent="."]
 position = Vector2(579, 320)

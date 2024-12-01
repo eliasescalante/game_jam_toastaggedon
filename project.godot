@@ -15,10 +15,6 @@ run/main_scene="res://menu/menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
-[display]
-
-window/size/resizable=false
-
 [input]
 
 ui_left={
