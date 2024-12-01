@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://cmfdgxgqtdc23" path="res://assets/images/WIN LOSE.png" id="2_ygcog"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ab06h"]
+font_size = 50
+font_color = Color(0.293219, 0.503909, 0.331117, 1)
 shadow_color = Color(0, 0, 0.054902, 0)
 
 [node name="Win-lose" type="Node2D"]
@@ -23,18 +25,19 @@ offset_top = 527.0
 offset_right = 716.0
 offset_bottom = 603.0
 
-[node name="TIEMPO" type="Label" parent="ui"]
-offset_left = 270.0
-offset_top = 232.0
-offset_right = 872.0
-offset_bottom = 321.0
-label_settings = SubResource("LabelSettings_ab06h")
-
 [node name="fondo_label" type="ColorRect" parent="ui"]
 offset_left = 270.0
-offset_top = 234.0
+offset_top = 237.0
 offset_right = 890.0
-offset_bottom = 320.0
+offset_bottom = 327.0
+
+[node name="TIEMPO" type="Label" parent="ui"]
+offset_left = 418.0
+offset_top = 236.0
+offset_right = 746.0
+offset_bottom = 325.0
+label_settings = SubResource("LabelSettings_ab06h")
+horizontal_alignment = 1
 
 [node name="fondo" type="Sprite2D" parent="."]
 position = Vector2(569, 330)

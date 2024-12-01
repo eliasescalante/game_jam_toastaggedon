@@ -1,57 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://dgsk8g8dy1gjx"]
+[gd_scene load_steps=4 format=3 uid="uid://dgsk8g8dy1gjx"]
 
-[ext_resource type="Script" path="res://scenes/level_1.gd" id="1_jvbue"]
+[ext_resource type="Script" path="res://scenes/Level1.gd" id="1_jvbue"]
+[ext_resource type="Texture2D" uid="uid://fmt8fmt0dljc" path="res://assets/images/fondo.png" id="2_6505r"]
 [ext_resource type="PackedScene" uid="uid://ccfcbk0iji4rt" path="res://player/personaje.tscn" id="2_p4v2b"]
-[ext_resource type="PackedScene" uid="uid://gbk21fy5mxm7" path="res://enemy_prueba/enemy1.tscn" id="3_myo1m"]
-[ext_resource type="PackedScene" uid="uid://877rwr1cmga3" path="res://item/cuchillo.tscn" id="3_nlcqn"]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_jvbue")
 
-[node name="Enemy1" parent="." instance=ExtResource("3_myo1m")]
-position = Vector2(246, 195)
-
-[node name="Enemy2" parent="." instance=ExtResource("3_myo1m")]
-position = Vector2(955, 440)
-
-[node name="Enemy3" parent="." instance=ExtResource("3_myo1m")]
-position = Vector2(563, 292)
-
-[node name="Enemy4" parent="." instance=ExtResource("3_myo1m")]
-position = Vector2(815, 181)
-
-[node name="Enemy5" parent="." instance=ExtResource("3_myo1m")]
-position = Vector2(50, 581)
-
-[node name="Enemy6" parent="." instance=ExtResource("3_myo1m")]
-position = Vector2(41, 72)
-
-[node name="Enemy7" parent="." instance=ExtResource("3_myo1m")]
-position = Vector2(463, 591)
-
-[node name="Enemy8" parent="." instance=ExtResource("3_myo1m")]
-position = Vector2(1044, 77)
-
-[node name="Enemy9" parent="." instance=ExtResource("3_myo1m")]
-position = Vector2(559, 49)
+[node name="mesa" type="Sprite2D" parent="."]
+position = Vector2(577, 318)
+scale = Vector2(0.610417, 0.62037)
+texture = ExtResource("2_6505r")
 
 [node name="Personaje" parent="." instance=ExtResource("2_p4v2b")]
 position = Vector2(307, 397)
-
-[node name="cuchillo" parent="." instance=ExtResource("3_nlcqn")]
-position = Vector2(394, 79)
-
-[node name="cuchillo2" parent="." instance=ExtResource("3_nlcqn")]
-position = Vector2(686, 475)
-
-[node name="cuchillo3" parent="." instance=ExtResource("3_nlcqn")]
-position = Vector2(99, 253)
-
-[node name="cuchillo4" parent="." instance=ExtResource("3_nlcqn")]
-position = Vector2(222, 580)
-
-[node name="cuchillo5" parent="." instance=ExtResource("3_nlcqn")]
-position = Vector2(1046, 281)
-
-[node name="cuchillo6" parent="." instance=ExtResource("3_nlcqn")]
-position = Vector2(767, 61)

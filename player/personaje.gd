@@ -9,10 +9,19 @@ class_name Player
 
 # Variables para manejar las animaciones de daño
 var enemy_hit_count: int = 0
-var death_animations: Array = ["idle", "death1", "death2", "death3", "death4"]
+var death_animations: Array = ["death1", "death2", "death3", "death4"]
 
 # Control de los movimientos
 var inverted_controls: bool = false  # Si los controles están invertidos
+
+@onready var collision_area: Area2D = $Area2D
+
+func _ready() -> void:
+	# Conectar las señales de colisión para detectar toques con enemigos e ítems
+	if collision_area:
+		collision_area.connect("body_entered", Callable(self, "_on_body_entered"))
+	else:
+		print("Error: collision_area no encontrado.")
 
 func _process(delta: float) -> void:
 	handle_movement()
@@ -59,19 +68,28 @@ func handle_animation() -> void:
 	else:
 		# De lo contrario, volver a la animación 'idle'
 		animated_sprite.play("idle")
+		
+func _on_body_entered(body) -> void:
+		# Verificar si el cuerpo con el que colidió es un enemigo
+	if body.is_in_group("enemy"):
+		_on_enemy_touched()  # Llamamos a _on_enemy_touched() para cambiar los controles
+		body.queue_free()  # Eliminamos el enemigo al tocarlo
+		get_parent().player_hit()  # Llamamos a player_hit() en el script del nivel
+
 
 func _on_enemy_touched() -> void:
-	# Cambia a la siguiente animación de daño si no se han reproducido todas
-	if enemy_hit_count < death_animations.size() - 1:
+	# Cambiar el estado de los controles
+	if inverted_controls:
+		inverted_controls = false
+		print("Controles restaurados a la normalidad.")
+	else:
+		# Si los controles no están invertidos, invertirlos
+		inverted_controls = true
+		print("Controles invertidos por enemigo.")
+	# Cambiar la animación de daño y asegurarse de que no se reproduzcan más de las permitidas
+	if enemy_hit_count < death_animations.size():
 		enemy_hit_count += 1
-		inverted_controls = true  # Invertir controles al ser tocado por un enemigo
-		print("Controles invertidos por enemigo. Animación: ", death_animations[enemy_hit_count])
+		print("Controles invertidos")
 	else:
 		print("Jugador sin vidas restantes.")
-
-func _on_item_touched() -> void:
-	# Contador de daño si es posible (recuperar vida)
-	if enemy_hit_count > 0:
-		enemy_hit_count -= 1
-		inverted_controls = false  # Restaurar controles normales al tocar un item
-		print("Controles normales restaurados. Animación: ", death_animations[enemy_hit_count])
+		get_tree().change_scene_to_file("res://win-lose/win-lose.tscn")
