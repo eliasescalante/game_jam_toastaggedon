@@ -37,7 +37,7 @@ En **Toastageddon**, tomás el control de una **tostada en el centro de la panta
 
 ## Capturas del Proyecto  
 
-<img src="https://github.com/YsaLuna/Chaos-Game-Jam/blob/main/assets/images/captura.png" width="600" alt="Captura del Proyecto" />
+<img src="https://github.com/eliasescalante/game_jam_toastaggedon/blob/main/assets/images/captura_nueva.png" width="800" alt="Captura del Proyecto" />
 
 ---
 
