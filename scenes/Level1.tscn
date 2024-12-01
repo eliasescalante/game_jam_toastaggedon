@@ -1,10 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgsk8g8dy1gjx"]
+[gd_scene load_steps=4 format=3 uid="uid://dgsk8g8dy1gjx"]
 
 [ext_resource type="Script" path="res://scenes/Level1.gd" id="1_jvbue"]
+[ext_resource type="Texture2D" uid="uid://fmt8fmt0dljc" path="res://assets/images/fondo.png" id="2_6505r"]
 [ext_resource type="PackedScene" uid="uid://ccfcbk0iji4rt" path="res://player/personaje.tscn" id="2_p4v2b"]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_jvbue")
+
+[node name="mesa" type="Sprite2D" parent="."]
+position = Vector2(577, 318)
+scale = Vector2(0.610417, 0.62037)
+texture = ExtResource("2_6505r")
 
 [node name="Personaje" parent="." instance=ExtResource("2_p4v2b")]
 position = Vector2(307, 397)
