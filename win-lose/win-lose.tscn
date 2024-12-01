@@ -1,9 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://0jtfldftaj48"]
+[gd_scene load_steps=11 format=3 uid="uid://0jtfldftaj48"]
 
 [ext_resource type="Script" path="res://win-lose/win_lose.gd" id="1_37bvw"]
 [ext_resource type="FontFile" uid="uid://bx0al0nrmbw2q" path="res://assets/font/Jersey20-Regular.ttf" id="2_24n6d"]
 [ext_resource type="AudioStream" uid="uid://c6rccsjnp3trh" path="res://assets/music/Tostada futurista FINAL.mp3" id="3_gq6q4"]
+[ext_resource type="Texture2D" uid="uid://b35t013n8ha4k" path="res://assets/images/Sin título.png" id="3_hp4dh"]
 [ext_resource type="Texture2D" uid="uid://fmt8fmt0dljc" path="res://assets/images/fondo.png" id="3_o0p6y"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dmcya"]
+texture = ExtResource("3_hp4dh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b2d84"]
+texture = ExtResource("3_hp4dh")
 
 [sub_resource type="LabelSettings" id="LabelSettings_ab06h"]
 font_size = 50
@@ -30,6 +37,7 @@ offset_right = 784.0
 offset_bottom = 500.0
 theme_override_fonts/font = ExtResource("2_24n6d")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_dmcya")
 text = "REINTENTAR"
 
 [node name="salir" type="Button" parent="ui"]
@@ -39,6 +47,7 @@ offset_right = 716.0
 offset_bottom = 603.0
 theme_override_fonts/font = ExtResource("2_24n6d")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_b2d84")
 text = "SALIR"
 
 [node name="fondo_label" type="ColorRect" parent="ui"]

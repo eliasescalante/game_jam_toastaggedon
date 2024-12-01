@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://oojq6i5uysam"]
+[gd_scene load_steps=7 format=3 uid="uid://oojq6i5uysam"]
 
 [ext_resource type="Script" path="res://instrucciones/instrucciones.gd" id="1_se4nh"]
 [ext_resource type="FontFile" uid="uid://bx0al0nrmbw2q" path="res://assets/font/Jersey20-Regular.ttf" id="2_27veu"]
 [ext_resource type="AudioStream" uid="uid://c5ec3j35qf8j" path="res://assets/music/Tostada futurista MENU 1.mp3" id="3_41gtp"]
+[ext_resource type="Texture2D" uid="uid://b35t013n8ha4k" path="res://assets/images/Sin título.png" id="3_xhcst"]
 [ext_resource type="Texture2D" uid="uid://dvkcvextblx6" path="res://assets/images/INSTRUCCIONES (1).png" id="4_p8sw5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c5hov"]
+texture = ExtResource("3_xhcst")
 
 [node name="Instrucciones" type="Node2D"]
 script = ExtResource("1_se4nh")
@@ -17,6 +21,7 @@ offset_right = 1145.0
 offset_bottom = 642.0
 theme_override_fonts/font = ExtResource("2_27veu")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_c5hov")
 text = "comenzar"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
