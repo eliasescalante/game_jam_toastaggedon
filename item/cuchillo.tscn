@@ -89,10 +89,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ody3s"]
-size = Vector2(37, 48)
+size = Vector2(33, 27)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p7crc"]
-radius = 26.1725
+radius = 24.0
 
 [node name="cuchillo" type="CharacterBody2D"]
 script = ExtResource("1_46tig")
@@ -103,10 +103,10 @@ position = Vector2(0, 13)
 sprite_frames = SubResource("SpriteFrames_kjfps")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.021637
+frame_progress = 0.644229
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, 22)
+position = Vector2(3.5, 13.5)
 shape = SubResource("RectangleShape2D_ody3s")
 
 [node name="Area2D" type="Area2D" parent="."]

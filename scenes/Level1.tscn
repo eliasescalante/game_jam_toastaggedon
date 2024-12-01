@@ -35,3 +35,9 @@ position = Vector2(562, 536)
 
 [node name="cuchillo3" parent="." instance=ExtResource("3_nlcqn")]
 position = Vector2(989, 201)
+
+[node name="cuchillo4" parent="." instance=ExtResource("3_nlcqn")]
+position = Vector2(430, 419)
+
+[node name="cuchillo5" parent="." instance=ExtResource("3_nlcqn")]
+position = Vector2(256, 330)

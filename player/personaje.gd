@@ -64,7 +64,7 @@ func _on_body_entered(body: Node) -> void:
 		_on_enemy_touched()
 
 	# Verificar si colisiona con un cuchillo
-	elif body.is_in_group("knife"):
+	if body.is_in_group("knife"):
 		body._on_knife_touched()
 
 func _on_enemy_touched() -> void:
