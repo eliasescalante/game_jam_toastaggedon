@@ -1,12 +1,11 @@
 extends Node
 
-var tiempo: float = 0.0
+var tiempo: float = 0.0  # Tiempo transcurrido en segundos
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	# Inicia el tiempo en 0 al comenzar el juego
+	tiempo = 0.0
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	# Incrementa el tiempo durante cada frame
+	tiempo += delta

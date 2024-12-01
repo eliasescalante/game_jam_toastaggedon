@@ -1,41 +1,67 @@
 extends CharacterBody2D
-class_name Enemy
 
-@export var speed: float = 100.0  # Velocidad del enemigo
-@export var screen_bounds: Rect2 = Rect2(Vector2(0, 0), Vector2(1024, 768))  # Tamaño de la pantalla
-@export var avoidance_radius: float = 50.0  # Radio de evitación para no acumularse
+# Velocidad inicial del enemigo
+@export var speed: float = 200.0
+var direction: Vector2 = Vector2.LEFT
 
-var target_direction: Vector2
+# Nodo Area2D para detectar colisiones con el jugador
+@onready var collision_area: Area2D = $Area2D
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+
+# Variable para acumular el tiempo
+var time_accumulated: float = 0.0
+@export var speed_increase_interval: float = 2.0
+@export var speed_increase_amount: float = 100.0 
 
 func _ready() -> void:
-	$Area2D.connect("body_entered", Callable(self, "_on_body_entered"))
-	set_random_direction()
+	collision_layer = 1
+	collision_mask = 2  
 
-func _process(delta: float) -> void:
-	avoid_other_enemies()
-	move_in_direction(delta)
+	# Conectar la señal de colisión cuando el enemigo toque el jugador
+	collision_area.connect("body_entered", Callable(self, "_on_body_entered"))
+	# Reproducir la animación de caminar al principio
+	animated_sprite.play("walk")
+	add_to_group("enemy")
 
-func move_in_direction(delta: float) -> void:
-	velocity = target_direction * speed
+func _physics_process(delta: float) -> void:
+	# Acumular el tiempo pasado
+	time_accumulated += delta
+	
+	# Aumentar la velocidad después de un intervalo de tiempo
+	if time_accumulated >= speed_increase_interval:
+		increase_speed(speed_increase_amount)
+		time_accumulated = 0.0  # Reiniciar el acumulador de tiempo
+
+	# Mover al enemigo en la dirección actual
+	velocity = direction * speed
 	move_and_slide()
 
-	if position.x < screen_bounds.position.x or position.x > screen_bounds.size.x:
-		target_direction.x *= -1
-	if position.y < screen_bounds.position.y or position.y > screen_bounds.size.y:
-		target_direction.y *= -1
+	# Detectar si el enemigo ha chocado con el borde de la pantalla
+	if is_out_of_bounds():
+		queue_free()
 
-func set_random_direction() -> void:
-	# Genera una dirección aleatoria normalizada
-	target_direction = Vector2(randf_range(-1, 1), randf_range(-1, 1)).normalized()
+	# Invertir la animación dependiendo de la dirección
+	if direction.x > 0:
+		animated_sprite.flip_h = false
+	else:
+		animated_sprite.flip_h = true
 
-func avoid_other_enemies() -> void:
-	var bodies = $Area2D.get_overlapping_bodies()
-	for body in bodies:
-		if body != self and body.is_in_group("enemy"):
-			var direction_away = position.direction_to(body.position).normalized()
-			target_direction += direction_away * 0.5
-			target_direction = target_direction.normalized()
+	# Reproducir la animación de caminar si no está ya jugando
+	if not animated_sprite.is_playing():
+		animated_sprite.play("walk")
 
-func _on_body_entered(body: Node) -> void:
+# Función para incrementar la velocidad del enemigo
+func increase_speed(amount: float) -> void:
+	speed += amount
+	print("Nueva velocidad del enemigo: ", speed)
+
+func is_out_of_bounds() -> bool:
+	# Comprobar si el enemigo ha salido de los límites de la pantalla
+	var screen_rect = get_viewport_rect()
+	return not screen_rect.has_point(position)
+
+# Función que se ejecuta cuando el enemigo colisiona con el jugador
+func _on_body_entered(body) -> void:
 	if body.is_in_group("player"):
+		queue_free()
 		body._on_enemy_touched()

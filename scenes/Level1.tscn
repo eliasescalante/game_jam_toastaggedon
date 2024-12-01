@@ -1,16 +1,37 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgsk8g8dy1gjx"]
+[gd_scene load_steps=5 format=3 uid="uid://dgsk8g8dy1gjx"]
 
 [ext_resource type="Script" path="res://scenes/Level1.gd" id="1_jvbue"]
-[ext_resource type="Texture2D" uid="uid://fmt8fmt0dljc" path="res://assets/images/fondo.png" id="2_6505r"]
+[ext_resource type="Texture2D" uid="uid://fmt8fmt0dljc" path="res://assets/images/fondo.png" id="2_cmc35"]
 [ext_resource type="PackedScene" uid="uid://ccfcbk0iji4rt" path="res://player/personaje.tscn" id="2_p4v2b"]
+[ext_resource type="PackedScene" uid="uid://877rwr1cmga3" path="res://item/cuchillo.tscn" id="3_nlcqn"]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_jvbue")
 
-[node name="mesa" type="Sprite2D" parent="."]
-position = Vector2(577, 318)
-scale = Vector2(0.610417, 0.62037)
-texture = ExtResource("2_6505r")
+[node name="Fondo2" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(577.799, 324.331)
+scale = Vector2(0.60021, 0.597536)
+texture = ExtResource("2_cmc35")
+
+[node name="Fondo" type="Sprite2D" parent="." groups=["knife", "player"]]
+texture_filter = 1
+position = Vector2(577.75, 325)
+scale = Vector2(0.60026, 0.601852)
+texture = ExtResource("2_cmc35")
 
 [node name="Personaje" parent="." instance=ExtResource("2_p4v2b")]
 position = Vector2(307, 397)
+
+[node name="cuchillo6" parent="." instance=ExtResource("3_nlcqn")]
+position = Vector2(682, 274)
+
+[node name="cuchillo" parent="." instance=ExtResource("3_nlcqn")]
+position = Vector2(311, 143)
+
+[node name="cuchillo2" parent="." instance=ExtResource("3_nlcqn")]
+position = Vector2(562, 536)
+
+[node name="cuchillo3" parent="." instance=ExtResource("3_nlcqn")]
+position = Vector2(989, 201)

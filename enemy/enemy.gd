@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 # Velocidad inicial del enemigo
-@export var speed: float = 300.0
+@export var speed: float = 200.0
 var direction: Vector2 = Vector2.LEFT
 
 # Nodo Area2D para detectar colisiones con el jugador
