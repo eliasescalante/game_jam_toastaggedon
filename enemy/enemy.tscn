@@ -69,7 +69,7 @@ scale = Vector2(1.49388, 1.42963)
 sprite_frames = SubResource("SpriteFrames_u01t7")
 animation = &"walk"
 autoplay = "walk"
-frame_progress = 0.883673
+frame_progress = 0.935384
 
 [node name="Area2D" type="Area2D" parent="."]
 

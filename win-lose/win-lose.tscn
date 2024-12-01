@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://0jtfldftaj48"]
+[gd_scene load_steps=5 format=3 uid="uid://0jtfldftaj48"]
 
 [ext_resource type="Script" path="res://win-lose/win_lose.gd" id="1_37bvw"]
 [ext_resource type="Texture2D" uid="uid://cmfdgxgqtdc23" path="res://assets/images/WIN LOSE.png" id="2_ygcog"]
+[ext_resource type="AudioStream" uid="uid://c6rccsjnp3trh" path="res://assets/music/Tostada futurista FINAL.mp3" id="3_gq6q4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ab06h"]
 font_size = 50
@@ -33,9 +34,9 @@ offset_bottom = 327.0
 
 [node name="TIEMPO" type="Label" parent="ui"]
 offset_left = 418.0
-offset_top = 236.0
+offset_top = 235.0
 offset_right = 746.0
-offset_bottom = 325.0
+offset_bottom = 324.0
 label_settings = SubResource("LabelSettings_ab06h")
 horizontal_alignment = 1
 
@@ -43,6 +44,10 @@ horizontal_alignment = 1
 position = Vector2(569, 330)
 scale = Vector2(0.611518, 0.627561)
 texture = ExtResource("2_ygcog")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_gq6q4")
+autoplay = true
 
 [connection signal="pressed" from="ui/reintentar" to="." method="_on_reintentar_pressed"]
 [connection signal="pressed" from="ui/salir" to="." method="_on_salir_pressed"]

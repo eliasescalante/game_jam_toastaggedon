@@ -1,7 +1,156 @@
-[gd_scene load_steps=3 format=3 uid="uid://cn5kxy3sg3gol"]
+[gd_scene load_steps=30 format=3 uid="uid://cn5kxy3sg3gol"]
 
 [ext_resource type="Script" path="res://creditos/creditos.gd" id="1_x4hhs"]
 [ext_resource type="Texture2D" uid="uid://clio30vtg3af5" path="res://assets/images/CREDITOS.png" id="2_50ta4"]
+[ext_resource type="AudioStream" uid="uid://c6rccsjnp3trh" path="res://assets/music/Tostada futurista FINAL.mp3" id="3_c8d2x"]
+[ext_resource type="Texture2D" uid="uid://b1pm3tv7abn88" path="res://assets/images/fondo final y creditos.png" id="3_ycbiw"]
+[ext_resource type="Texture2D" uid="uid://bv7bomf3y5sci" path="res://assets/images/tostada2-Shee64x64t.png" id="4_l0j4i"]
+[ext_resource type="FontFile" uid="uid://bx0al0nrmbw2q" path="res://assets/font/Jersey20-Regular.ttf" id="4_yok4i"]
+[ext_resource type="Texture2D" uid="uid://chm8cnw1cof5l" path="res://assets/images/tostada3-Shee64x64t.png" id="5_2f3wv"]
+[ext_resource type="Texture2D" uid="uid://b35t013n8ha4k" path="res://assets/images/Sin título.png" id="5_5johr"]
+[ext_resource type="Texture2D" uid="uid://ck4uy52821epa" path="res://assets/images/tostada4-Sheet64x64.png" id="6_rssmy"]
+[ext_resource type="Texture2D" uid="uid://dge1tkmfevui" path="res://assets/images/tostada-Shee64x64t.png" id="7_0tfsg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6dwdp"]
+texture = ExtResource("5_5johr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8iq80"]
+texture = ExtResource("5_5johr")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhrbm"]
+atlas = ExtResource("4_l0j4i")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlpxr"]
+atlas = ExtResource("4_l0j4i")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fhgtl"]
+atlas = ExtResource("4_l0j4i")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3scnw"]
+atlas = ExtResource("4_l0j4i")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwqsc"]
+atlas = ExtResource("5_2f3wv")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eari7"]
+atlas = ExtResource("5_2f3wv")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xh82d"]
+atlas = ExtResource("5_2f3wv")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8gsg"]
+atlas = ExtResource("5_2f3wv")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3taf"]
+atlas = ExtResource("6_rssmy")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ted6r"]
+atlas = ExtResource("6_rssmy")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_527ts"]
+atlas = ExtResource("6_rssmy")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3qnqt"]
+atlas = ExtResource("6_rssmy")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_02swc"]
+atlas = ExtResource("7_0tfsg")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ou045"]
+atlas = ExtResource("7_0tfsg")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20okk"]
+atlas = ExtResource("7_0tfsg")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbfgx"]
+atlas = ExtResource("7_0tfsg")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2rhof"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhrbm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mlpxr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fhgtl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3scnw")
+}],
+"loop": true,
+"name": &"death1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hwqsc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eari7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xh82d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s8gsg")
+}],
+"loop": true,
+"name": &"death2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3taf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ted6r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_527ts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3qnqt")
+}],
+"loop": true,
+"name": &"death3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_02swc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ou045")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_20okk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbfgx")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [node name="Creditos" type="Node2D"]
 script = ExtResource("1_x4hhs")
@@ -9,25 +158,178 @@ script = ExtResource("1_x4hhs")
 [node name="ui" type="Node" parent="."]
 
 [node name="Creditos" type="Sprite2D" parent="ui"]
-position = Vector2(578, 324)
-scale = Vector2(0.601042, 0.601852)
+visible = false
+position = Vector2(586.5, 272)
+scale = Vector2(0.613021, 0.698148)
 texture = ExtResource("2_50ta4")
 
-[node name="quit" type="Button" parent="ui"]
-offset_left = 966.0
-offset_top = 564.0
-offset_right = 1131.0
-offset_bottom = 636.0
-text = "SALIR
+[node name="Creditos2" type="Sprite2D" parent="ui"]
+position = Vector2(581.2, 324.981)
+scale = Vector2(1.12461, 1.27742)
+texture = ExtResource("3_ycbiw")
 
-"
+[node name="quit" type="Button" parent="ui"]
+texture_filter = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 964.0
+offset_top = -59.0
+offset_right = -18.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("4_yok4i")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_6dwdp")
+text = "SALIR"
+icon_alignment = 1
 
 [node name="volver" type="Button" parent="ui"]
-offset_left = 964.0
-offset_top = 483.0
-offset_right = 1131.0
-offset_bottom = 552.0
+texture_filter = 1
+offset_left = 966.0
+offset_top = 529.0
+offset_right = 1133.0
+offset_bottom = 576.0
+theme_override_fonts/font = ExtResource("4_yok4i")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_8iq80")
 text = "ATRAS"
+
+[node name="tostada_player" type="AnimatedSprite2D" parent="ui" groups=["player"]]
+texture_filter = 1
+position = Vector2(564, 410)
+scale = Vector2(4.96971, 4.74902)
+sprite_frames = SubResource("SpriteFrames_2rhof")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Label" type="Label" parent="ui"]
+offset_left = 4.0
+offset_top = 26.0
+offset_right = 1150.0
+offset_bottom = 127.0
+theme_override_fonts/font = ExtResource("4_yok4i")
+theme_override_font_sizes/font_size = 120
+text = "¡GRACIAS POR JUGAR!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_c8d2x")
+autoplay = true
+
+[node name="NOMBRES" type="Node" parent="."]
+
+[node name="eli" type="Label" parent="NOMBRES"]
+texture_filter = 1
+offset_left = 33.0
+offset_top = 198.0
+offset_right = 362.0
+offset_bottom = 303.0
+rotation = -0.156065
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_yok4i")
+theme_override_font_sizes/font_size = 50
+text = "Elias Escalante 
+(Programación)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="facu" type="Label" parent="NOMBRES"]
+texture_filter = 1
+offset_left = 602.0
+offset_top = 550.0
+offset_right = 931.0
+offset_bottom = 655.0
+rotation = -0.156065
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_yok4i")
+theme_override_font_sizes/font_size = 50
+text = "Facundo Coronel 
+(Audio / SFX)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="victo" type="Label" parent="NOMBRES"]
+texture_filter = 1
+offset_left = -22.0
+offset_top = 535.0
+offset_right = 497.0
+offset_bottom = 640.0
+rotation = -0.156065
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_yok4i")
+theme_override_font_sizes/font_size = 50
+text = "Victor Villarreal
+(Arte)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="luci" type="Label" parent="NOMBRES"]
+texture_filter = 1
+offset_left = 71.0
+offset_top = 313.0
+offset_right = 400.0
+offset_bottom = 418.0
+rotation = 0.110888
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_yok4i")
+theme_override_font_sizes/font_size = 50
+text = "Lucía Ruggieri 
+(Arte)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="mari" type="Label" parent="NOMBRES"]
+texture_filter = 1
+offset_left = 402.0
+offset_top = 148.0
+offset_right = 761.0
+offset_bottom = 253.0
+rotation = 0.157997
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_yok4i")
+theme_override_font_sizes/font_size = 50
+text = "Mariano Di Zoccolo 
+(QA tester)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ysa" type="Label" parent="NOMBRES"]
+texture_filter = 1
+offset_left = 710.0
+offset_top = 338.0
+offset_right = 1122.0
+offset_bottom = 443.0
+rotation = -0.0912342
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_yok4i")
+theme_override_font_sizes/font_size = 50
+text = "Ysamar Balcazar
+(Programación)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NOMBRES"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="fer" type="Label" parent="NOMBRES"]
+texture_filter = 1
+offset_left = 771.0
+offset_top = 145.0
+offset_right = 1153.0
+offset_bottom = 250.0
+rotation = 0.130473
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_yok4i")
+theme_override_font_sizes/font_size = 50
+text = "Fernanda Di Zoccolo 
+(Game design)"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="ui/quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="ui/volver" to="." method="_on_volver_pressed"]

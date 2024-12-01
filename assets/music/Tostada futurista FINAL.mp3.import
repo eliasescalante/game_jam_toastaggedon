@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c6rccsjnp3trh"
+path="res://.godot/imported/Tostada futurista FINAL.mp3-5b804548f5b3b230b517ce4a016d4537.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Tostada futurista FINAL.mp3"
+dest_files=["res://.godot/imported/Tostada futurista FINAL.mp3-5b804548f5b3b230b517ce4a016d4537.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

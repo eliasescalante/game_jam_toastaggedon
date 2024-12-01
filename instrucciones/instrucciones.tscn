@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://oojq6i5uysam"]
+[gd_scene load_steps=4 format=3 uid="uid://oojq6i5uysam"]
 
 [ext_resource type="Script" path="res://instrucciones/instrucciones.gd" id="1_se4nh"]
 [ext_resource type="Texture2D" uid="uid://b3c0yg14g827n" path="res://assets/images/INSTRUCCIONES.png" id="2_2ekd8"]
+[ext_resource type="AudioStream" uid="uid://c5ec3j35qf8j" path="res://assets/music/Tostada futurista MENU 1.mp3" id="3_41gtp"]
 
 [node name="Instrucciones" type="Node2D"]
 script = ExtResource("1_se4nh")
@@ -19,5 +20,9 @@ text = "comenzar"
 position = Vector2(578, 329)
 scale = Vector2(0.609896, 0.614815)
 texture = ExtResource("2_2ekd8")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_41gtp")
+autoplay = true
 
 [connection signal="pressed" from="ui/siguiente" to="." method="_on_siguiente_pressed"]
