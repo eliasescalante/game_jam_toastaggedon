@@ -28,10 +28,10 @@ func _ready() -> void:
 	screen_size = get_viewport_rect().size
 	player_area = $Personaje/Area2D 
 	spawn_timer = Timer.new()
-	# Configurar el temporizador para que llame a la función spawn_enemy() cada 0.5 segundos
 	spawn_timer.wait_time = 0.5
 	spawn_timer.autostart = true
 	spawn_timer.one_shot = false
+	
 	add_child(spawn_timer)
 	# Conectar la señal del temporizador para que llame a la función cada vez que se dispara
 	spawn_timer.connect("timeout", Callable(self, "_on_spawn_timer_timeout"))
@@ -112,4 +112,3 @@ func game_over() -> void:
 # Actualizar el tiempo de juego en cada frame
 func _process(delta: float) -> void:
 	game_time += delta
-	
