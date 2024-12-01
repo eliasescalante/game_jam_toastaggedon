@@ -21,6 +21,7 @@ func _ready() -> void:
 	collision_area.connect("body_entered", Callable(self, "_on_body_entered"))
 	# Reproducir la animación de caminar al principio
 	animated_sprite.play("walk")
+	add_to_group("enemy")
 
 func _physics_process(delta: float) -> void:
 	# Acumular el tiempo pasado

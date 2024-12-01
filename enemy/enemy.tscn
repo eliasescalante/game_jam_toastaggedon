@@ -234,7 +234,7 @@ size = Vector2(76, 80)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_koikl"]
 size = Vector2(76, 79)
 
-[node name="Enemy" type="CharacterBody2D"]
+[node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
 script = ExtResource("1_emkfy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

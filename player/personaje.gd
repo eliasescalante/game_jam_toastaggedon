@@ -70,9 +70,12 @@ func handle_animation() -> void:
 		animated_sprite.play("idle")
 		
 func _on_body_entered(body) -> void:
-	# Verificar si el cuerpo con el que colidió es un enemigo
+		# Verificar si el cuerpo con el que colidió es un enemigo
 	if body.is_in_group("enemy"):
-		_on_enemy_touched()
+		_on_enemy_touched()  # Llamamos a _on_enemy_touched() para cambiar los controles
+		body.queue_free()  # Eliminamos el enemigo al tocarlo
+		get_parent().player_hit()  # Llamamos a player_hit() en el script del nivel
+
 
 func _on_enemy_touched() -> void:
 	# Cambiar el estado de los controles

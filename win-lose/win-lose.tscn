@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://cmfdgxgqtdc23" path="res://assets/images/WIN LOSE.png" id="2_ygcog"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ab06h"]
-font_size = 20
-font_color = Color(0, 0, 0, 1)
+font_size = 50
+font_color = Color(0.293219, 0.503909, 0.331117, 1)
 shadow_color = Color(0, 0, 0.054902, 0)
 
 [node name="Win-lose" type="Node2D"]
