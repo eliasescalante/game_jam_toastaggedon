@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://oojq6i5uysam"]
+[gd_scene load_steps=5 format=3 uid="uid://oojq6i5uysam"]
 
 [ext_resource type="Script" path="res://instrucciones/instrucciones.gd" id="1_se4nh"]
-[ext_resource type="Texture2D" uid="uid://b3c0yg14g827n" path="res://assets/images/INSTRUCCIONES.png" id="2_2ekd8"]
+[ext_resource type="FontFile" uid="uid://bx0al0nrmbw2q" path="res://assets/font/Jersey20-Regular.ttf" id="2_27veu"]
 [ext_resource type="AudioStream" uid="uid://c5ec3j35qf8j" path="res://assets/music/Tostada futurista MENU 1.mp3" id="3_41gtp"]
+[ext_resource type="Texture2D" uid="uid://dvkcvextblx6" path="res://assets/images/INSTRUCCIONES (1).png" id="4_p8sw5"]
 
 [node name="Instrucciones" type="Node2D"]
 script = ExtResource("1_se4nh")
@@ -10,19 +11,21 @@ script = ExtResource("1_se4nh")
 [node name="ui" type="Node" parent="."]
 
 [node name="siguiente" type="Button" parent="ui"]
-offset_left = 944.0
-offset_top = 606.0
+offset_left = 858.0
+offset_top = 580.0
 offset_right = 1145.0
 offset_bottom = 642.0
+theme_override_fonts/font = ExtResource("2_27veu")
+theme_override_font_sizes/font_size = 50
 text = "comenzar"
-
-[node name="Instrucciones" type="Sprite2D" parent="."]
-position = Vector2(578, 329)
-scale = Vector2(0.609896, 0.614815)
-texture = ExtResource("2_2ekd8")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_41gtp")
 autoplay = true
+
+[node name="Instrucciones(1)" type="Sprite2D" parent="."]
+position = Vector2(578.5, 325.25)
+scale = Vector2(0.68563, 0.851921)
+texture = ExtResource("4_p8sw5")
 
 [connection signal="pressed" from="ui/siguiente" to="." method="_on_siguiente_pressed"]

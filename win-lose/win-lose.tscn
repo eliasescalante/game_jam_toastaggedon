@@ -1,13 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://0jtfldftaj48"]
+[gd_scene load_steps=8 format=3 uid="uid://0jtfldftaj48"]
 
 [ext_resource type="Script" path="res://win-lose/win_lose.gd" id="1_37bvw"]
-[ext_resource type="Texture2D" uid="uid://cmfdgxgqtdc23" path="res://assets/images/WIN LOSE.png" id="2_ygcog"]
+[ext_resource type="FontFile" uid="uid://bx0al0nrmbw2q" path="res://assets/font/Jersey20-Regular.ttf" id="2_24n6d"]
 [ext_resource type="AudioStream" uid="uid://c6rccsjnp3trh" path="res://assets/music/Tostada futurista FINAL.mp3" id="3_gq6q4"]
+[ext_resource type="Texture2D" uid="uid://fmt8fmt0dljc" path="res://assets/images/fondo.png" id="3_o0p6y"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ab06h"]
 font_size = 50
 font_color = Color(0.293219, 0.503909, 0.331117, 1)
 shadow_color = Color(0, 0, 0.054902, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vhmxh"]
+font = ExtResource("2_24n6d")
+font_size = 100
+
+[sub_resource type="LabelSettings" id="LabelSettings_b5ifu"]
+font = ExtResource("2_24n6d")
+font_size = 50
 
 [node name="Win-lose" type="Node2D"]
 script = ExtResource("1_37bvw")
@@ -19,12 +28,18 @@ offset_left = 368.0
 offset_top = 382.0
 offset_right = 784.0
 offset_bottom = 500.0
+theme_override_fonts/font = ExtResource("2_24n6d")
+theme_override_font_sizes/font_size = 50
+text = "REINTENTAR"
 
 [node name="salir" type="Button" parent="ui"]
 offset_left = 436.0
 offset_top = 527.0
 offset_right = 716.0
 offset_bottom = 603.0
+theme_override_fonts/font = ExtResource("2_24n6d")
+theme_override_font_sizes/font_size = 50
+text = "SALIR"
 
 [node name="fondo_label" type="ColorRect" parent="ui"]
 offset_left = 270.0
@@ -40,14 +55,32 @@ offset_bottom = 324.0
 label_settings = SubResource("LabelSettings_ab06h")
 horizontal_alignment = 1
 
-[node name="fondo" type="Sprite2D" parent="."]
-position = Vector2(569, 330)
-scale = Vector2(0.611518, 0.627561)
-texture = ExtResource("2_ygcog")
+[node name="Titulo" type="Label" parent="ui"]
+offset_left = 100.0
+offset_top = 36.0
+offset_right = 1038.0
+offset_bottom = 189.0
+text = "FUISTE TOASTEADO"
+label_settings = SubResource("LabelSettings_vhmxh")
+horizontal_alignment = 1
+
+[node name="subtitulo" type="Label" parent="ui"]
+offset_left = 393.0
+offset_top = 156.0
+offset_right = 756.0
+offset_bottom = 225.0
+text = "SOBREVIVISTE: "
+label_settings = SubResource("LabelSettings_b5ifu")
+horizontal_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_gq6q4")
 autoplay = true
+
+[node name="Fondo" type="Sprite2D" parent="."]
+position = Vector2(567, 320)
+scale = Vector2(0.578125, 0.333008)
+texture = ExtResource("3_o0p6y")
 
 [connection signal="pressed" from="ui/reintentar" to="." method="_on_reintentar_pressed"]
 [connection signal="pressed" from="ui/salir" to="." method="_on_salir_pressed"]
