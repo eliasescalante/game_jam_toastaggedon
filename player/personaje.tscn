@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://ccfcbk0iji4rt"]
+[gd_scene load_steps=22 format=3 uid="uid://ccfcbk0iji4rt"]
 
 [ext_resource type="Texture2D" uid="uid://c4g8jap3g7dxl" path="res://player/Warrior_Blue.png" id="1_57r73"]
 [ext_resource type="Script" path="res://player/personaje.gd" id="1_y7mpm"]
@@ -134,6 +134,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jy72o"]
 size = Vector2(40, 80)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q1ii7"]
+
 [node name="Personaje" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_y7mpm")
 
@@ -143,6 +145,11 @@ sprite_frames = SubResource("SpriteFrames_tk8u2")
 animation = &"death1"
 autoplay = "idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["player"]]
 position = Vector2(-1, -7)
 shape = SubResource("RectangleShape2D_jy72o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_q1ii7")
